@@ -42,10 +42,7 @@ const NavigationBar = () => {
 
   return (
     <Box __css={navStyles}>
-      <Box
-        className="navbar-container"
-        height={scrolled ? "4.5rem" : "12.5rem"}
-      >
+      <Box className="navbar-container">
         <Flex
           className="navbar-top"
           height={scrolled ? "0" : "9rem"}
@@ -73,7 +70,7 @@ const NavigationBar = () => {
           align="center"
           justify="space-between"
           px={4}
-          height="3rem"
+          height="4.5rem"
           paddingTop="1rem"
         >
           <Spacer />
@@ -98,7 +95,7 @@ const NavigationBar = () => {
             </Link>
           </HStack>
 
-          <HStack spacing={4} display={displayMode}>
+          <HStack spacing={4} display={displayMode}  marginBottom="20px">
             <Button
               bg="#DAA520"
               color="black"

@@ -18,12 +18,13 @@ const theme = extendTheme({
         initial: {
           bg: "green.500",
           boxShadow: "lg",
+          height: "12.5rem",
         },
         scrolled: {
           bg: "green.600",
           boxShadow: "md",
-         height: "4.5rem",
-         paddingTop: "1rem",
+          height: "4.5rem",
+          paddingTop: "1rem",
         },
       },
     },
