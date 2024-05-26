@@ -23,8 +23,8 @@ const theme = extendTheme({
         scrolled: {
           bg: "green.600",
           boxShadow: "md",
-          height: "4.5rem",
-          paddingTop: "1rem",
+          height: "4rem",
+        //   paddingTop: "1rem",
         },
       },
     },

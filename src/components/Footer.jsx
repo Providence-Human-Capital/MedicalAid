@@ -91,7 +91,7 @@ const Footer = () => {
           </GridItem>
         </Grid>
       </Box>
-      <Box bg="gray.800" color="whiteAlpha.800" height="6rem" py={4} mt={0}>
+      <Box bg="#124538" color="whiteAlpha.800" height="6rem" py={4} mt={0}>
         <Flex
           direction={isMobile ? "column" : "row"}
           justify="space-between"

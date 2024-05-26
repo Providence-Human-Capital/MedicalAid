@@ -1,27 +1,36 @@
 import { useState } from "react";
 import "./App.css";
-import NavigationBar from "./components/NavigationBar";
-import Footer from "./components/Footer";
-import { Box } from "@chakra-ui/react";
-import CallMeBack from "./components/CallMeBack";
-import CoverSection from "./components/CoverSection";
-import FAQSection from "./components/FAQSection";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import HomeInit from "./HomeInit";
+import Home from "./views/Home/Home";
+import ContactUs from "./views/Contact/ContactUs";
+import SelfService from "./views/SelfService/SelfService";
 
 const App = () => {
   return (
     <>
-      <Box display="flex" flexDirection="column" minHeight="100vh">
-        <NavigationBar />
-        <Box as="main" flex="1" pt={{ base: "12.5rem", md: "12.5rem" }}>
-          <CallMeBack />
-          <CoverSection />
-          {/* Main content of your application */}
-          <FAQSection />
-        </Box>
-        <Footer />
-      </Box>
+      <HashRouter>
+        <WrapperComponent />
+      </HashRouter>
+    </>
+  );
+};
+
+const WrapperComponent = () => {
+  return (
+    <>
+      <Routes>
+        <Route exact path="/" element={<Navigate to={"/home"} />} />
+        <Route exact path="/" element={<HomeInit />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact/us" element={<ContactUs />} />
+          <Route path="/self/service" element={<SelfService />} />
+        </Route>
+      </Routes>
     </>
   );
 };
 
 export default App;
+
+export { WrapperComponent };

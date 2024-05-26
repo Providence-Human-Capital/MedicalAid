@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 const CallMeBack = () => {
-  const formWidth = useBreakpointValue({ base: "90%", md: "400px" });
+  const formWidth = useBreakpointValue({ base: "90%", md: "450px" });
   return (
     <>
       <Flex
@@ -27,6 +27,7 @@ const CallMeBack = () => {
         minH="70vh"
         bg="gray.50"
         p={4}
+        pt={20}
       >
         <Container maxW="70%">
           <Flex
@@ -41,7 +42,7 @@ const CallMeBack = () => {
                 *Providence Health is not a Medical Scheme or an Insurer
               </Text>
               <Heading as="h1" size="2xl" mt={2} color="green.600">
-                Medical Insurance
+                Providence Medical Aid
               </Heading>
               <Text fontSize="lg" mt={2} color="gray.600">
                 Take care of your family with products to suit your needs &
@@ -63,7 +64,7 @@ const CallMeBack = () => {
               m={4}
               maxW={formWidth}
             >
-              <Heading as="h3" size="lg" mb={4}>
+              <Heading as="h4" size="lg" mb={4}>
                 Get a call back
               </Heading>
               <Text mb={4}>

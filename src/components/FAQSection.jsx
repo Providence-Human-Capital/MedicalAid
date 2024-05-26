@@ -51,7 +51,7 @@ const faqs = [
 const FAQSection = () => {
   return (
    
-      <Box p={8} bg="gray.50" minH="100vh">
+      <Box p={10} bg="gray.50" pt={20} minH="70vh">
          <Container maxW="70%">
         <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap={8} mb={8}>
           <GridItem>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   Box,
   Flex,
-  Link,
   Button,
   Spacer,
   HStack,
@@ -20,7 +19,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
+import { Link } from "react-router-dom";
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,14 +51,15 @@ const NavigationBar = () => {
           <Flex align="center" px={4} width="100%">
             <Spacer />
             <Box fontSize="2xl" fontWeight="300" color="white">
-              <Link href="/">
+              <Link to="/">
                 <Image
-                  src="/images/medicalaid.png"
+                  src="/images/medicalaid2.png"
                   alt="Providence Medical Aid"
                   height="6rem"
                 />
               </Link>
             </Box>
+            <Spacer />
             <Spacer />
             <Spacer />
             <Spacer />
@@ -70,46 +70,53 @@ const NavigationBar = () => {
           align="center"
           justify="space-between"
           px={4}
-          height="4.5rem"
+          height="4rem"
           paddingTop="1rem"
+          bg="#1F755F"
         >
           <Spacer />
-          <HStack spacing={4} display={displayMode} marginRight={2}>
-            <Link href="#" fontWeight="200" color="white">
-              Medical Insurance
+          <HStack spacing={6} display={displayMode} marginRight={4}>
+            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
+              Medical Insurance   
             </Link>
-            <Link href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff"}}>|</span>
+            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
               Gap Cover
             </Link>
-            <Link href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff"}}>|</span>
+            <Link style={{color: "#fff"}} to="/contact/us" fontWeight="200" color="white">
               Contact
             </Link>
-            <Link href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff"}}>|</span>
+            <Link  style={{color: "#fff"}} to={"/self/service"} fontWeight="200" color="white">
               Self Support
             </Link>
-            <Link href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff"}}>|</span>
+            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
               Lifestyle Benefits
             </Link>
-            <Link href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff"}}>|</span>
+            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
               Info Hub
             </Link>
+            <span style={{ color: "#fff"}}>|</span>
           </HStack>
 
-          <HStack spacing={4} display={displayMode}  marginBottom="20px">
+          <HStack spacing={4} display={displayMode}  marginBottom="">
             <Button
               bg="#DAA520"
-              color="black"
+              color="green"
               fontSize={13}
-              fontWeight="300"
+              fontWeight="500"
               borderRadius={20}
             >
               FIND A DOCTOR
             </Button>
             <Button
               bg="#DAA520"
-              color="black"
+              color="green"
               fontSize={13}
-              fontWeight="300"
+              fontWeight="500"
               borderRadius={20}
             >
               CHECK PRICES
