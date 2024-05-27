@@ -22,7 +22,7 @@ import {
   MenuItem,
   Menu,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { TriangleDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -88,6 +88,7 @@ const NavigationBar = () => {
             <Menu>
               <MenuButton as={Link} style={{ color: "#fff" }} color="white" fontWeight="200">
                 Medical Insurance
+                <TriangleDownIcon ml={1} />
               </MenuButton>
               <MenuList>
                 <MenuItem>Doctors</MenuItem>
@@ -102,6 +103,7 @@ const NavigationBar = () => {
               fontWeight="200"
             >
               Gap Cover
+              <TriangleDownIcon ml={1} />
             </Link>
             <span style={{ color: "#fff" }}>|</span>
             {location.pathname === "/contact/us" ?
