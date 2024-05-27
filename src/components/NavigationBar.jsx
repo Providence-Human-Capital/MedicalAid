@@ -23,10 +23,11 @@ import {
   Menu,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +85,7 @@ const NavigationBar = () => {
               Medical Insurance   
             </Link> */}
             <Menu>
-              <MenuButton as={Link}   style={{ color: "#fff" }} color="white" fontWeight="200">
+              <MenuButton as={Link} style={{ color: "#fff" }} color="white" fontWeight="200">
                 Medical Insurance
               </MenuButton>
               <MenuList>
@@ -103,23 +104,46 @@ const NavigationBar = () => {
               Gap Cover
             </Link>
             <span style={{ color: "#fff" }}>|</span>
-            <Link
-              style={{ color: "#fff" }}
-              to="/contact/us"
-              fontWeight="200"
-              color="white"
-            >
-              Contact
-            </Link>
+            {location.pathname === "/contact/us" ?
+              <Link
+                style={{ color: "#1F7" }}
+                to="/contact/us"
+                fontWeight="200"
+                color="white"
+              >
+                Contact
+              </Link>
+              :
+              <Link
+                style={{ color: "#fff" }}
+                to="/contact/us"
+                fontWeight="200"
+                color="white"
+              >
+                Contact
+              </Link>
+            }
             <span style={{ color: "#fff" }}>|</span>
-            <Link
-              style={{ color: "#fff" }}
-              to={"/self/service"}
-              fontWeight="200"
-              color="white"
-            >
-              Self Support
-            </Link>
+            {location.pathname === '/self/service' ?
+              <Link
+                style={{ color: "#1F7" }}
+                to={"/self/service"}
+                fontWeight="200"
+                color="white"
+              >
+                Self Support
+              </Link>
+              :
+              <Link
+                style={{ color: "#fff" }}
+                to={"/self/service"}
+                fontWeight="200"
+                color="white"
+              >
+                Self Support
+              </Link>
+            }
+
             <span style={{ color: "#fff" }}>|</span>
             <Link
               style={{ color: "#fff" }}
