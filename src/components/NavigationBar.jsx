@@ -17,6 +17,10 @@ import {
   DrawerCloseButton,
   useDisclosure,
   VStack,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Menu,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
@@ -76,33 +80,68 @@ const NavigationBar = () => {
         >
           <Spacer />
           <HStack spacing={6} display={displayMode} marginRight={4}>
-            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
+            {/* <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
               Medical Insurance   
-            </Link>
-            <span style={{ color: "#fff"}}>|</span>
-            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
+            </Link> */}
+            <Menu>
+              <MenuButton as={Link}   style={{ color: "#fff" }} color="white" fontWeight="200">
+                Medical Insurance
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Doctors</MenuItem>
+                <MenuItem>Optometry</MenuItem>
+                <MenuItem>Dentist</MenuItem>
+              </MenuList>
+            </Menu>
+            <span style={{ color: "#fff" }}>|</span>
+            <Link
+              style={{ color: "#fff" }}
+              href="#"
+              fontWeight="200"
+              color="white"
+            >
               Gap Cover
             </Link>
-            <span style={{ color: "#fff"}}>|</span>
-            <Link style={{color: "#fff"}} to="/contact/us" fontWeight="200" color="white">
+            <span style={{ color: "#fff" }}>|</span>
+            <Link
+              style={{ color: "#fff" }}
+              to="/contact/us"
+              fontWeight="200"
+              color="white"
+            >
               Contact
             </Link>
-            <span style={{ color: "#fff"}}>|</span>
-            <Link  style={{color: "#fff"}} to={"/self/service"} fontWeight="200" color="white">
+            <span style={{ color: "#fff" }}>|</span>
+            <Link
+              style={{ color: "#fff" }}
+              to={"/self/service"}
+              fontWeight="200"
+              color="white"
+            >
               Self Support
             </Link>
-            <span style={{ color: "#fff"}}>|</span>
-            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff" }}>|</span>
+            <Link
+              style={{ color: "#fff" }}
+              href="#"
+              fontWeight="200"
+              color="white"
+            >
               Lifestyle Benefits
             </Link>
-            <span style={{ color: "#fff"}}>|</span>
-            <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
+            <span style={{ color: "#fff" }}>|</span>
+            <Link
+              style={{ color: "#fff" }}
+              href="#"
+              fontWeight="200"
+              color="white"
+            >
               Info Hub
             </Link>
-            <span style={{ color: "#fff"}}>|</span>
+            <span style={{ color: "#fff" }}>|</span>
           </HStack>
 
-          <HStack spacing={4} display={displayMode}  marginBottom="">
+          <HStack spacing={4} display={displayMode} marginBottom="">
             <Button
               bg="#DAA520"
               color="green"
