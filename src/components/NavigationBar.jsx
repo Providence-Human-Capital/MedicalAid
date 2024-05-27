@@ -163,19 +163,19 @@ const NavigationBar = () => {
 
           <HStack spacing={4} display={displayMode} marginBottom="">
             <Button
-              bg="#DAA520"
+              bg="#fff"
               color="green"
               fontSize={13}
-              fontWeight="500"
+              fontWeight="600"
               borderRadius={20}
             >
               FIND A DOCTOR
             </Button>
             <Button
-              bg="#DAA520"
+              bg="#fff"
               color="green"
               fontSize={13}
-              fontWeight="500"
+              fontWeight="600"
               borderRadius={20}
             >
               CHECK PRICES
