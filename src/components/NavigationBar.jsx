@@ -44,6 +44,7 @@ const NavigationBar = () => {
   const displayMode = useBreakpointValue({ base: "none", md: "flex" });
   const mobileDisplayMode = useBreakpointValue({ base: "flex", md: "none" });
 
+
   return (
     <Box __css={navStyles}>
       <Box className="navbar-container">
@@ -99,26 +100,24 @@ const NavigationBar = () => {
               style={{ color: "#fff" }}
               href="#"
               fontWeight="200"
-              color="white"
             >
               Gap Cover
             </Link>
             <span style={{ color: "#fff" }}>|</span>
             {location.pathname === "/contact/us" ?
               <Link
-                style={{ color: "#1F7" }}
+                style={{ color: "#1F7", }}
                 to="/contact/us"
                 fontWeight="200"
-                color="white"
+                className="link"
               >
                 Contact
               </Link>
               :
               <Link
-                style={{ color: "#fff" }}
                 to="/contact/us"
                 fontWeight="200"
-                color="white"
+                className="link"
               >
                 Contact
               </Link>
@@ -129,16 +128,15 @@ const NavigationBar = () => {
                 style={{ color: "#1F7" }}
                 to={"/self/service"}
                 fontWeight="200"
-                color="white"
+                className="link"
               >
                 Self Support
               </Link>
               :
               <Link
-                style={{ color: "#fff" }}
                 to={"/self/service"}
                 fontWeight="200"
-                color="white"
+                className="link"
               >
                 Self Support
               </Link>
@@ -146,19 +144,17 @@ const NavigationBar = () => {
 
             <span style={{ color: "#fff" }}>|</span>
             <Link
-              style={{ color: "#fff" }}
               href="#"
               fontWeight="200"
-              color="white"
+              className="link"
             >
               Lifestyle Benefits
             </Link>
             <span style={{ color: "#fff" }}>|</span>
             <Link
-              style={{ color: "#fff" }}
               href="#"
               fontWeight="200"
-              color="white"
+              className="link"
             >
               Info Hub
             </Link>
