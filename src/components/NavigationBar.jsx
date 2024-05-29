@@ -27,6 +27,7 @@ import { Link, useLocation } from "react-router-dom";
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [menu, setMenu] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -43,6 +44,15 @@ const NavigationBar = () => {
   });
   const displayMode = useBreakpointValue({ base: "none", md: "flex" });
   const mobileDisplayMode = useBreakpointValue({ base: "flex", md: "none" });
+
+  const handleHover = () => {
+    setMenu(true);
+    console.log('first')
+  };
+
+  const handleLeave = () => {
+    setMenu(false);
+  };
 
 
   return (
@@ -82,19 +92,29 @@ const NavigationBar = () => {
         >
           <Spacer />
           <HStack spacing={6} display={displayMode} marginRight={4}>
-            {/* <Link style={{color: "#fff"}} href="#" fontWeight="200" color="white">
-              Medical Insurance   
-            </Link> */}
-            <Menu>
-              <MenuButton as={Link} style={{ color: "#fff" }} color="white" fontWeight="200">
+            <Menu position="relative">
+              <MenuButton as={Link} style={{ color: "#fff" }} color="white" fontWeight="200" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
                 Medical Insurance
                 <TriangleDownIcon ml={1} />
               </MenuButton>
-              <MenuList>
-                <MenuItem>Doctors</MenuItem>
-                <MenuItem>Optometry</MenuItem>
-                <MenuItem>Dentist</MenuItem>
-              </MenuList>
+              {menu && (
+                <Box onMouseEnter={handleHover}
+                  onMouseLeave={handleLeave}
+                  zIndex="1"
+                  position="absolute"
+                  top={{ base: "100%", lg: "100%", xl: "93%", "2xl": "92%" }}
+                  left={{ base: "0%", lg: "0%", xl: "5%", "2xl": "18%" }}
+                  width={{ base: "18%", lg: "18%", xl: "15%", "2xl": "10%" }}
+                  bg="white"
+                  boxShadow="lg"
+                >
+
+                  <MenuItem>Doctors</MenuItem>
+                  <MenuItem>Optometry</MenuItem>
+                  <MenuItem>Dentist</MenuItem>
+                </Box>
+              )}
+
             </Menu>
             <span style={{ color: "#fff" }}>|</span>
             <Link
@@ -193,7 +213,7 @@ const NavigationBar = () => {
               aria-label="Open Menu"
             />
             <Button
-              bg="#DAA520"
+              bg="#fff"
               color="black"
               fontSize={13}
               fontWeight="300"
@@ -203,7 +223,7 @@ const NavigationBar = () => {
               FIND A DOCTOR
             </Button>
             <Button
-              bg="#DAA520"
+              bg="#fff"
               color="black"
               fontSize={13}
               fontWeight="300"
@@ -249,7 +269,7 @@ const NavigationBar = () => {
                   Info Hub
                 </Link>
                 <Button
-                  bg="#DAA520"
+                  bg="#fff"
                   color="black"
                   fontSize={13}
                   fontWeight="300"
@@ -260,7 +280,7 @@ const NavigationBar = () => {
                   FIND A DOCTOR
                 </Button>
                 <Button
-                  bg="#DAA520"
+                  bg="#fff"
                   color="black"
                   fontSize={13}
                   fontWeight="300"
@@ -275,7 +295,7 @@ const NavigationBar = () => {
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
-    </Box>
+    </Box >
   );
 };
 
