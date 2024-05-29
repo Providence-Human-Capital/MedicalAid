@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 
 const CallMeBack = () => {
-  const formWidth = useBreakpointValue({ base: "90%", md: "450px" });
   return (
     <>
       <Flex
@@ -27,17 +26,22 @@ const CallMeBack = () => {
         minH="70vh"
         bg="gray.50"
         p={4}
-        pt={20}
+        pt={14}
       >
-        <Container maxW="70%">
+        <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
           <Flex
             direction={{ base: "column", md: "row" }}
             align="center"
             justify="center"
-          
-           
+
+
           >
-            <Box flex="1" textAlign={{ base: "center", md: "left" }} p={4}>
+            <Box
+              flex="1"
+              textAlign={{ base: "center", md: "left" }}
+              p={4}
+              width={{ sm: "80%", md: "40%", lg: "50%" }}
+            >
               <Text fontSize="sm" color="gray.500">
                 *Providence Health is not a Medical Scheme or an Insurer
               </Text>
@@ -56,13 +60,14 @@ const CallMeBack = () => {
               </Box>
             </Box>
             <Box
-              flex="1"
+              width={{ base: "100%", sm: "100%", md: "60%", lg: "50%" }}
+              // flex="1"
               bg="white"
               boxShadow="md"
               borderRadius="lg"
-              p={6}
+              p={{ base: 4, sm: 4, md: 6 }}
               m={4}
-              maxW={formWidth}
+
             >
               <Heading as="h4" size="lg" mb={4}>
                 Get a call back

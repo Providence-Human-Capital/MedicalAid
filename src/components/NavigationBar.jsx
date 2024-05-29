@@ -32,7 +32,7 @@ const NavigationBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 60);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -211,8 +211,9 @@ const NavigationBar = () => {
               onClick={onOpen}
               fontSize="2rem"
               aria-label="Open Menu"
+              mt={5}
             />
-            <Button
+            {/* <Button
               bg="#fff"
               color="black"
               fontSize={13}
@@ -231,7 +232,7 @@ const NavigationBar = () => {
               width="100%"
             >
               CHECK PRICES
-            </Button>
+            </Button> */}
           </HStack>
           <Spacer />
         </Flex>
@@ -253,9 +254,9 @@ const NavigationBar = () => {
                 <Link href="#" onClick={onClose}>
                   Medical Insurance
                 </Link>
-                <Link href="#" onClick={onClose}>
+                {/* <Link href="#" onClick={onClose}>
                   Gap Cover
-                </Link>
+                </Link> */}
                 <Link href="#" onClick={onClose}>
                   Contact
                 </Link>
