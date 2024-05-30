@@ -30,7 +30,7 @@ const Footer = () => {
               </Text>
               <Link href="#">About</Link>
               <Link href="#">Find a Doctor/Provider</Link>
-              <Link href="#">Health Insurance Calculator</Link>
+              {/* <Link href="#">Health Insurance Calculator</Link> */}
               <Link href="#">Self Support</Link>
               <Link href="#">Medical Insurance FAQs</Link>
               <Link href="#">Gap Cover FAQs</Link>
@@ -41,11 +41,11 @@ const Footer = () => {
               <Text fontSize="lg" fontWeight="bold">
                 Products
               </Text>
-              <Link href="#">MyHealth Core</Link>
-              <Link href="#">MyHealth Plus</Link>
+              {/* <Link href="#">MyHealth Core</Link> */}
+              {/* <Link href="#">MyHealth Plus</Link> */}
               <Link href="#">Accident Cover</Link>
               <Link href="#">Buy for Someone Else</Link>
-              <Link href="#">Gap Cover</Link>
+              {/* <Link href="#">Gap Cover</Link> */}
               <Link href="#">Lifestyle Benefits</Link>
             </VStack>
           </GridItem>
@@ -55,7 +55,7 @@ const Footer = () => {
                 Connect
               </Text>
               <Link href="#">Medical Insurance Policy Packs</Link>
-              <Link href="#">Gap Cover Policy Packs</Link>
+              {/* <Link href="#">Gap Cover Policy Packs</Link> */}
               <Link href="#">Contact</Link>
               <Link href="#">Info Hub</Link>
               <HStack spacing={4} mt={4}>
