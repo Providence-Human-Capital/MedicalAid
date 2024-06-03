@@ -27,8 +27,8 @@ import { Link, useLocation } from "react-router-dom";
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [menu, setMenu] = useState(false)
-  const location = useLocation()
+  const [menu, setMenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,13 +47,12 @@ const NavigationBar = () => {
 
   const handleHover = () => {
     setMenu(true);
-    console.log('first')
+    console.log("first");
   };
 
   const handleLeave = () => {
     setMenu(false);
   };
-
 
   return (
     <Box __css={navStyles}>
@@ -93,12 +92,20 @@ const NavigationBar = () => {
           <Spacer />
           <HStack spacing={6} display={displayMode} marginRight={4}>
             <Menu position="relative">
-              <MenuButton as={Link} style={{ color: "#fff" }} color="white" fontWeight="200" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+              <MenuButton
+                as={Link}
+                style={{ color: "#fff" }}
+                color="white"
+                fontWeight="200"
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              >
                 Medical Insurance
                 <TriangleDownIcon ml={1} />
               </MenuButton>
               {menu && (
-                <Box onMouseEnter={handleHover}
+                <Box
+                  onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
                   zIndex="1"
                   position="absolute"
@@ -108,44 +115,34 @@ const NavigationBar = () => {
                   bg="white"
                   boxShadow="lg"
                 >
-
                   <MenuItem>Doctors</MenuItem>
                   <MenuItem>Optometry</MenuItem>
                   <MenuItem>Dentist</MenuItem>
                 </Box>
               )}
-
             </Menu>
+            {/* <span style={{ color: "#fff" }}>|</span> */}
+            {/* <Link style={{ color: "#fff" }} href="#" fontWeight="200"> */}
+            {/* Gap Cover */}
+            {/* <TriangleDownIcon ml={1} /> */}
+            {/* </Link> */}
             <span style={{ color: "#fff" }}>|</span>
-            <Link
-              style={{ color: "#fff" }}
-              href="#"
-              fontWeight="200"
-            >
-              Gap Cover
-              <TriangleDownIcon ml={1} />
-            </Link>
-            <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === "/contact/us" ?
+            {location.pathname === "/contact/us" ? (
               <Link
-                style={{ color: "#1F7", }}
+                style={{ color: "#1F7" }}
                 to="/contact/us"
                 fontWeight="200"
                 className="link"
               >
                 Contact
               </Link>
-              :
-              <Link
-                to="/contact/us"
-                fontWeight="200"
-                className="link"
-              >
+            ) : (
+              <Link to="/contact/us" fontWeight="200" className="link">
                 Contact
               </Link>
-            }
+            )}
             <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === '/self/service' ?
+            {location.pathname === "/self/service" ? (
               <Link
                 style={{ color: "#1F7" }}
                 to={"/self/service"}
@@ -154,33 +151,44 @@ const NavigationBar = () => {
               >
                 Self Support
               </Link>
-              :
-              <Link
-                to={"/self/service"}
-                fontWeight="200"
-                className="link"
-              >
+            ) : (
+              <Link to={"/self/service"} fontWeight="200" className="link">
                 Self Support
               </Link>
-            }
-
+            )}
             <span style={{ color: "#fff" }}>|</span>
-            <Link
-              href="#"
-              fontWeight="200"
-              className="link"
-            >
+            {location.pathname === "/living/style" ? (
+              <>
+                <Link to={"/living/style"} fontWeight="200" className="link">
+                  Lifestyle Benefits
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to={"/living/style"} fontWeight="200" className="link">
+                  Lifestyle Benefits
+                </Link>
+              </>
+            )}
+            {/* <Link href="#" fontWeight="200" className="link">
               Lifestyle Benefits
-            </Link>
+            </Link> */}
             <span style={{ color: "#fff" }}>|</span>
-            <Link
-              href="#"
-              fontWeight="200"
-              className="link"
-            >
+            <Link to={"/info/hub"} fontWeight="200" className="link">
               Info Hub
             </Link>
             <span style={{ color: "#fff" }}>|</span>
+            {location.pathname === "info/hub" ? (
+              // <Link to={"/info/hub"} fontWeight="200" className="link">
+              <span style={{ color: "#fff" }}>|</span>
+            ) : (
+              // </Link>
+              <>
+                {/* <Link to={"/info/hub"} fontWeight="200" className="link"> */}
+                Info Hub
+                {/* </Link> */}
+              </>
+            )}
           </HStack>
 
           <HStack spacing={4} display={displayMode} marginBottom="">
@@ -296,7 +304,7 @@ const NavigationBar = () => {
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
-    </Box >
+    </Box>
   );
 };
 

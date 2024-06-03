@@ -8,6 +8,7 @@ import {
   HStack,
   Image,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const SelfService = () => {
   return (
@@ -44,7 +45,14 @@ const SelfService = () => {
             mb={4}
           />
           <Heading size="md" color="green.600">
-            Find a provider
+            <Link
+              to={"/clinic/location"}
+              fontWeight="200"
+              className="link"
+              style={{ color: "green" }}
+            >
+              Find a provider
+            </Link>
           </Heading>
           <Text textAlign="center">
             Search for Doctors, Dentist, Hospitals, Optometrists and clinic
