@@ -9,6 +9,10 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import provider from "../../../public/icons/observation.png"
+import doctor from "../../../public/icons/medical-staff.png"
+import counselling from "../../../public/icons/conversation.png"
+import pharmacy from "../../../public/icons/medicine.png"
 
 const SelfService = () => {
   return (
@@ -40,13 +44,14 @@ const SelfService = () => {
           maxW="sm"
         >
           <Image
-            src="https://placehold.co/100x100"
+            src={provider}
+            height={{ base: '80px', lg: '120px' }}
             alt="Find a provider"
             mb={4}
           />
           <Heading size="md" color="green.600">
             <Link
-              to={"/clinic/location"}
+              to={"/clinic-location"}
               fontWeight="200"
               className="link"
               style={{ color: "green" }}
@@ -70,10 +75,13 @@ const SelfService = () => {
           m={4}
           maxW="sm"
         >
-          <Image src="https://placehold.co/100x100" alt="Consultation" mb={4} />
+          <Image src={doctor}
+            height={{ base: '80px', lg: '120px' }}
+            alt="Consultation" mb={4} />
+
           <Heading size="md" color="green.600">
             <Link
-              to={"/doctor/lnfo"}
+              to={"/doctor-lnfo"}
               fontWeight="200"
               className="link"
               style={{ color: "green" }}
@@ -98,7 +106,8 @@ const SelfService = () => {
           maxW="sm"
         >
           <Image
-            src="https://placehold.co/100x100"
+            src={counselling}
+            height={{ base: '80px', lg: '120px' }}
             alt="Book Family, Legal or Financial Counselling"
             mb={4}
           />
@@ -119,7 +128,8 @@ const SelfService = () => {
           maxW="sm"
         >
           <Image
-            src="https://placehold.co/100x100"
+            src={pharmacy}
+            height={{ base: '80px', lg: '120px' }}
             alt="Find a Pharmacy"
             mb={4}
           />

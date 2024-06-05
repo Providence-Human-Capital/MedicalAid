@@ -27,12 +27,12 @@ const WrapperComponent = () => {
         <Route exact path="/" element={<Navigate to={"/home"} />} />
         <Route exact path="/" element={<HomeInit />}>
           <Route path="/home" element={<Home />} />
-          <Route path="/contact/us" element={<ContactUs />} />
-          <Route path="/self/service" element={<SelfService />} />
-          <Route path="/living/style" element={<LivingStyle />} />
-          <Route path="/info/hub" element={<InfoHub />} />
-          <Route path="/clinic/location" element={<Clinics />} />
-          <Route path="/doctor/lnfo" element={<DoctorList />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/self-service" element={<SelfService />} />
+          <Route path="/living-style" element={<LivingStyle />} />
+          <Route path="/info-hub" element={<InfoHub />} />
+          <Route path="/clinic-location" element={<Clinics />} />
+          <Route path="/doctor-lnfo" element={<DoctorList />} />
         </Route>
       </Routes>
     </>

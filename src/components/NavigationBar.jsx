@@ -127,68 +127,73 @@ const NavigationBar = () => {
             {/* <TriangleDownIcon ml={1} /> */}
             {/* </Link> */}
             <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === "/contact/us" ? (
+            {location.pathname === "/contact-us" ? (
               <Link
                 style={{ color: "#1F7" }}
-                to="/contact/us"
+                to="/contact-us"
                 fontWeight="200"
                 className="link"
               >
                 Contact
               </Link>
             ) : (
-              <Link to="/contact/us" fontWeight="200" className="link">
+              <Link to="/contact-us" fontWeight="200" className="link">
                 Contact
               </Link>
             )}
             <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === "/self/service" ? (
+            {location.pathname === "/self-service" ? (
               <Link
                 style={{ color: "#1F7" }}
-                to={"/self/service"}
+                to={"/self-service"}
                 fontWeight="200"
                 className="link"
               >
                 Self Support
               </Link>
             ) : (
-              <Link to={"/self/service"} fontWeight="200" className="link">
+              <Link to={"/self-service"} fontWeight="200" className="link">
                 Self Support
               </Link>
             )}
+
             <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === "/living/style" ? (
+            {location.pathname === "/living-style" ? (
               <>
-                <Link to={"/living/style"} fontWeight="200" className="link">
+                <Link to={"/living-style"}
+                  style={{ color: "#1F7" }}
+                  fontWeight="200"
+                  className="link">
                   Lifestyle Benefits
                 </Link>
               </>
             ) : (
               <>
-                <Link to={"/living/style"} fontWeight="200" className="link">
+                <Link to={"/living-style"} fontWeight="200" className="link">
                   Lifestyle Benefits
                 </Link>
               </>
             )}
-            {/* <Link href="#" fontWeight="200" className="link">
-              Lifestyle Benefits
-            </Link> */}
+
             <span style={{ color: "#fff" }}>|</span>
-            <Link to={"/info/hub"} fontWeight="200" className="link">
-              Info Hub
-            </Link>
-            <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === "info/hub" ? (
-              // <Link to={"/info/hub"} fontWeight="200" className="link">
-              <span style={{ color: "#fff" }}>|</span>
-            ) : (
-              // </Link>
+            {location.pathname === "/info-hub" ? (
               <>
-                {/* <Link to={"/info/hub"} fontWeight="200" className="link"> */}
-                Info Hub
-                {/* </Link> */}
+                <Link to={"/info-hub"}
+                  style={{ color: "#1F7" }}
+                  fontWeight="200"
+                  className="link">
+                  Info Hub
+                </Link>
+              </>
+            ) : (
+
+              <>
+                <Link to={"/info-hub"} fontWeight="200" className="link">
+                  Info Hub
+                </Link>
               </>
             )}
+
           </HStack>
 
           <HStack spacing={4} display={displayMode} marginBottom="">
