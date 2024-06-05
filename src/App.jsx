@@ -8,6 +8,7 @@ import SelfService from "./views/SelfService/SelfService";
 import LivingStyle from "./views/LivingStyle/LivingStyle";
 import InfoHub from "./views/Info/InfoHub";
 import Clinics from "./views/Clinics/Clinics";
+import DoctorList from "./views/Doctors/DoctorList";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const WrapperComponent = () => {
           <Route path="/living/style" element={<LivingStyle />} />
           <Route path="/info/hub" element={<InfoHub />} />
           <Route path="/clinic/location" element={<Clinics />} />
+          <Route path="/doctor/lnfo" element={<DoctorList />} />
         </Route>
       </Routes>
     </>

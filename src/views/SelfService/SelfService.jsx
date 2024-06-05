@@ -72,7 +72,14 @@ const SelfService = () => {
         >
           <Image src="https://placehold.co/100x100" alt="Consultation" mb={4} />
           <Heading size="md" color="green.600">
-            Consultation(Ask a Doctor)
+            <Link
+              to={"/doctor/lnfo"}
+              fontWeight="200"
+              className="link"
+              style={{ color: "green" }}
+            >
+              Consultation(Ask a Doctor)
+            </Link>
           </Heading>
           <Text textAlign="center">
             Book “Ask a Doctor”: Virtual Doctors for diagnosis, scripts or
