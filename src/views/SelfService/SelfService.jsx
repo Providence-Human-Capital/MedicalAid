@@ -23,14 +23,12 @@ const SelfService = () => {
       <Flex justify="center" mb={8}>
         <HStack spacing={0}>
           <Box
-            bg="green.500"
-            color="white"
+            // bg="green.500"
+            color="black"
             py={2}
             px={4}
-            borderTopLeftRadius="md"
-            borderBottomLeftRadius="md"
           >
-            <Text>Medical Insurance & Accident Cover</Text>
+            <Text fontSize={'xl'} color="green.600" as={'b'}>Medical Insurance & Accident Cover</Text>
           </Box>
         </HStack>
       </Flex>

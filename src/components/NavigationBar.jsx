@@ -110,14 +110,16 @@ const NavigationBar = () => {
                   zIndex="1"
                   position="absolute"
                   top={{ base: "100%", lg: "100%", xl: "93%", "2xl": "92%" }}
-                  left={{ base: "0%", lg: "0%", xl: "5%", "2xl": "18%" }}
+                  left={{ base: "0%", lg: "0%", xl: "11%", "2xl": "23%" }}
                   width={{ base: "18%", lg: "18%", xl: "15%", "2xl": "10%" }}
                   bg="white"
-                  boxShadow="lg"
+                  boxShadow="xl"
+                  borderRadius={'6px'}
+                  border={'1px solid #dbdbdb'}
                 >
-                  <MenuItem>Doctors</MenuItem>
-                  <MenuItem>Optometry</MenuItem>
-                  <MenuItem>Dentist</MenuItem>
+                  <MenuItem _hover={{ backgroundColor: '#d9d4d4' }}>Doctors</MenuItem>
+                  <MenuItem _hover={{ backgroundColor: '#d9d4d4' }}>Optometry</MenuItem>
+                  <MenuItem _hover={{ backgroundColor: '#d9d4d4' }}>Dentist</MenuItem>
                 </Box>
               )}
             </Menu>

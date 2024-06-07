@@ -18,13 +18,15 @@ const Footer = () => {
     <>
       <Box as="footer" bg="green.500" color="white" py={10} px={5}>
         <Grid
-          templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          // templateColumns={{ base: "2fr", md: "repeat(4, 1fr)" }}
           gap={6}
           maxW="1200px"
           mx="auto"
         >
           <GridItem>
             <VStack align="start">
+              {/* {{ base: "center", md: "start" }} */}
               <Text fontSize="lg" fontWeight="bold">
                 Company
               </Text>
@@ -78,12 +80,12 @@ const Footer = () => {
               </Text>
               <Link href="#">Starting here for a healthier tomorrow</Link>
               <Box mt={4}>
-                <Text>Powered by</Text>
+                <Text align="start">Powered by</Text>
                 <HStack spacing={4} mt={2}>
                   <Image
                     src="/images/medicalaid.png"
                     alt="Providence Medical Aid"
-                    height="6rem"
+                    height={{ base: "5rem", md: "6rem" }}
                   />
                 </HStack>
               </Box>
@@ -91,36 +93,37 @@ const Footer = () => {
           </GridItem>
         </Grid>
       </Box>
-      <Box bg="#124538" color="whiteAlpha.800" height="6rem" py={4} mt={0}>
+
+      <Box bg="#124538" color="whiteAlpha.800" height="6rem">
         <Flex
           direction={isMobile ? "column" : "row"}
           justify="space-between"
           align="center"
           maxW="1200px"
           mx="auto"
-          px={5}
+          p={{ base: 5, md: 6 }}
+          bg="#124538"
+        // pt={5}
         >
-          <Text>© Providence Human Capital</Text>
-          <Flex direction={isMobile ? "column" : "row"} align="center">
-            <Link href="#" fontSize={12} mx={2}>
-              Email Disclaimer
-            </Link>
-            <Link href="#" fontSize={12} mx={2}>
-              PAIA Manual
-            </Link>
-            <Link href="#" fontSize={12} mx={2}>
-              Complaints management policy
-            </Link>
-            <Link href="#" fontSize={12} mx={2}>
-              Conflict of Interest Policy
-            </Link>
-            <Link href="#" fontSize={12} mx={2}>
-              Treating customers Fairly Policy
-            </Link>
-            <Link href="#" fontSize={12} mx={2}>
-              Privacy Policy
-            </Link>
-          </Flex>
+          <Text>©2024 Providence Human Capital</Text>
+          <Link href="#" fontSize={12} mx={2}>
+            Email Disclaimer
+          </Link>
+          <Link href="#" fontSize={12} mx={2}>
+            PAIA Manual
+          </Link>
+          <Link href="#" fontSize={12} mx={2}>
+            Complaints management policy
+          </Link>
+          <Link href="#" fontSize={12} mx={2}>
+            Conflict of Interest Policy
+          </Link>
+          <Link href="#" fontSize={12} mx={2}>
+            Treating customers Fairly Policy
+          </Link>
+          <Link href="#" fontSize={12} mx={2}>
+            Privacy Policy
+          </Link>
         </Flex>
       </Box>
     </>

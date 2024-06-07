@@ -50,9 +50,10 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-   
-      <Box p={10} bg="gray.50" pt={20} minH="70vh">
-         <Container maxW="70%">
+
+    <Box p={10} bg="gray.50" pt={20} minH="70vh">
+      <Container maxW={{ base: "100%", md: "70%" }}>
+        {/* '2xl': "70%", xl: "70%", lg: "70%", md: "70%", sm: "100%", xs: "100%" */}
         <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap={8} mb={8}>
           <GridItem>
             <VStack spacing={4} textAlign={{ base: "center", md: "left" }}>
@@ -110,13 +111,13 @@ const FAQSection = () => {
             Can't find the answer you're looking for? Our team is happy to
             answer your questions.
           </Text>
-          <Button colorScheme="green" size="lg" fontWeight="200"> 
+          <Button colorScheme="green" size="lg" fontWeight="200">
             Send us an email
           </Button>
         </Box>
-        </Container>
-      </Box>
-   
+      </Container>
+    </Box >
+
   );
 };
 
