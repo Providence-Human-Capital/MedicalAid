@@ -8,11 +8,13 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Container,
 } from "@chakra-ui/react";
 
 const ContactUs = () => {
   return (
-    <Box p={4}>
+    <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
+      <Box p={4}>
       <Text
         fontSize="2xl"
         fontWeight="bold"
@@ -27,7 +29,7 @@ const ContactUs = () => {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Box bg="gray.100" p={4} borderRadius="md">
+            <Box bg="gray.100" p={8} borderRadius="md">
               <Text fontSize="xl" fontWeight="bold" color="green.500">
                 Medical Insurance
               </Text>
@@ -59,6 +61,7 @@ const ContactUs = () => {
         </TabPanels>
       </Tabs>
     </Box>
+    </Container>
   );
 };
 

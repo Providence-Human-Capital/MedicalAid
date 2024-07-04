@@ -6,17 +6,19 @@ import {
   Image,
   Flex,
   useColorMode,
+  Container,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 const LivingStyle = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box
-      bg={colorMode === "light" ? "gray.100" : "gray.800"}
+  <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
+      <Box
+      // bg={colorMode === "light" ? "gray.100" : "gray.800"}
       p={8}
       borderRadius="md"
-      boxShadow="md"
+      // boxShadow="md"
     >
       <Heading as="h2" size="lg" color="green.500">
         Introducing
@@ -67,6 +69,7 @@ const LivingStyle = () => {
         />
       </Flex>
     </Box>
+  </Container>
   );
 };
 

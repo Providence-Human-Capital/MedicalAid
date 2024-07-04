@@ -7,6 +7,7 @@ import {
   VStack,
   HStack,
   Image,
+  Container,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import provider from "../../../public/icons/observation.png"
@@ -16,7 +17,8 @@ import pharmacy from "../../../public/icons/medicine.png"
 
 const SelfService = () => {
   return (
-    <Box bg="gray.100" p={4}>
+    <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
+      <Box bg="gray.50" p={4}>
       <Box textAlign="center" mb={8}>
         <Heading color="green.600">Self-Support</Heading>
       </Box>
@@ -141,6 +143,7 @@ const SelfService = () => {
         </VStack>
       </Flex>
     </Box>
+    </Container>
   );
 };
 
