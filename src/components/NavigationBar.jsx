@@ -21,6 +21,8 @@ import {
   MenuList,
   MenuItem,
   Menu,
+  Center,
+  Container
 } from "@chakra-ui/react";
 import { TriangleDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "react-router-dom";
@@ -39,6 +41,7 @@ const NavigationBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
   const navStyles = useStyleConfig("Navbar", {
     variant: scrolled ? "scrolled" : "initial",
   });
@@ -47,7 +50,6 @@ const NavigationBar = () => {
 
   const handleHover = () => {
     setMenu(true);
-    console.log("first");
   };
 
   const handleLeave = () => {
@@ -71,6 +73,7 @@ const NavigationBar = () => {
                   src="/images/medicalaid2.png"
                   alt="Providence Medical Aid"
                   height="6rem"
+                  pl={20}
                 />
               </Link>
             </Box>
@@ -218,6 +221,7 @@ const NavigationBar = () => {
               CHECK PRICES
             </Button>
           </HStack>
+
           <HStack display={mobileDisplayMode} spacing={4}>
             <IconButton
               icon={<HamburgerIcon />}
@@ -226,28 +230,9 @@ const NavigationBar = () => {
               onClick={onOpen}
               fontSize="2rem"
               aria-label="Open Menu"
-              mt={5}
+              mt={2}
+            // left={'170px'}
             />
-            {/* <Button
-              bg="#fff"
-              color="black"
-              fontSize={13}
-              fontWeight="300"
-              borderRadius={20}
-              width="100%"
-            >
-              FIND A DOCTOR
-            </Button>
-            <Button
-              bg="#fff"
-              color="black"
-              fontSize={13}
-              fontWeight="300"
-              borderRadius={20}
-              width="100%"
-            >
-              CHECK PRICES
-            </Button> */}
           </HStack>
           <Spacer />
         </Flex>
@@ -258,54 +243,35 @@ const NavigationBar = () => {
           <DrawerContent>
             <DrawerCloseButton color="#fff" />
             <DrawerHeader alignContent="center" backgroundColor="green.600">
-              <Image
-                src="/images/medicalaid.png"
-                alt="Providence Medical Aid"
-                height="6rem"
-              />
+              <Center>
+                <Image
+                  src="/images/medicalaid2.png"
+                  alt="Providence Medical Aid"
+                  height="6rem"
+                />
+              </Center>
             </DrawerHeader>
             <DrawerBody>
-              <VStack spacing={6}>
-                <Link href="#" onClick={onClose}>
-                  Medical Insurance
-                </Link>
-                {/* <Link href="#" onClick={onClose}>
-                  Gap Cover
-                </Link> */}
-                <Link href="#" onClick={onClose}>
+              <VStack spacing={6} mt={6}>
+                <Link to={"/contact-us"} onClick={onClose} className="phone-link">
                   Contact
                 </Link>
-                <Link href="#" onClick={onClose}>
+                <Link to={"/self-service"} onClick={onClose} className="phone-link">
                   Self Support
                 </Link>
-                <Link href="#" onClick={onClose}>
+                <Link to={"/living-style"} onClick={onClose} className="phone-link">
                   Lifestyle Benefits
                 </Link>
-                <Link href="#" onClick={onClose}>
+                <Link to={"/info-hub"} onClick={onClose} className="phone-link">
                   Info Hub
                 </Link>
-                <Button
-                  bg="#fff"
-                  color="black"
-                  fontSize={13}
-                  fontWeight="300"
-                  borderRadius={20}
-                  width="100%"
-                  onClick={onClose}
-                >
-                  FIND A DOCTOR
-                </Button>
-                <Button
-                  bg="#fff"
-                  color="black"
-                  fontSize={13}
-                  fontWeight="300"
-                  borderRadius={20}
-                  width="100%"
-                  onClick={onClose}
-                >
-                  CHECK PRICES
-                </Button>
+                <Link href="#" onClick={onClose} className="phone-link">
+                  Find a Doctor
+                </Link>
+                <Link href="#" onClick={onClose} className="phone-link">
+                  Check Prices
+                </Link>
+
               </VStack>
             </DrawerBody>
           </DrawerContent>

@@ -5,3 +5,8 @@
 .link:hover {
     border-bottom: 2px solid
 }
+
+.phone-link:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
