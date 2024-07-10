@@ -316,6 +316,7 @@ const Clinics = () => {
       <Container
         maxW={{ base: "100%", md: "1600px" }}
         pt="5"
+        pb="10"
         px={{ base: "4", md: "8" }}
       >
         <TableContainer>

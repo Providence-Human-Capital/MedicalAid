@@ -22,29 +22,34 @@ import {
 
 const faqs = [
   {
-    question: "How is Chakra UI Pro different from Chakra UI?",
+    question: "Can our members get treated at Private Hospitals or Clinics?   ",
     answer:
-      "Chakra UI Pro is built on top of the popular Chakra UI component library. Compared to Chakra UI, the components we offer here are more complex and range from simple banners to full blown page layouts.",
+      "At the moment, our members can only be attended at Providence Health Facilities and Government hospitals or clinics our doctors would have referred them.",
   },
   {
-    question: "What do I get when I buy a Chakra UI Pro license?",
+    question: "Are Dependents also part of the Medical Aid beneficiaries?  ",
     answer:
-      "After you have purchased a license from our payment provider, you will receive an email from us with your license key. You can then enter the license key in the setup wizard. The source code is provided to you via the website, just like with the free components.",
+      "As of now, our Medical Aid is for members only. Only our members can make use of the Medical Aid.",
   },
   {
-    question: "Does Chakra UI Pro come with a Figma file or similar?",
+    question: "Does the Medical Aid Cover Maternity?",
     answer:
-      "Yes, Chakra UI Pro includes design files for Figma, Sketch, and Adobe XD to help you quickly get started with your design projects.",
+      "Maternity benefits kicks in three months before Expected delivery date and covered up to delivery.",
   },
   {
-    question: "How does the Team license work?",
+    question: "Are there any shortfalls for this Medical Aid?",
     answer:
-      "The Team license allows you to use Chakra UI Pro for up to 10 developers. Each developer will get access to the full library of components and our premium support.",
+      "Currently our Medical Aid does not have any shortfalls. ",
   },
   {
-    question: "Do you offer a free trial?",
+    question: "Where can members be treated using this Medical Aid? ",
     answer:
-      "Yes, we offer a 14-day free trial for you to explore the components and see if they fit your project needs.",
+      "Members should visit any of our Providence Clinics near them to receive treatment. Treatment at government hospitals will be done through the doctor’s referral",
+  },
+  {
+    question: "Where are Providence Health Facilities?",
+    answer:
+      "Harare - (81 Baines Avenue, 52 Baines Avenue, 64 Cork road Avondale, 40 Josiah Chinamano Avenue, Epworth Clinic), Bulawayo - (Fort Street and 9th Avenue, Royal Arcade Complex), Gweru - 39 6th street, Mutare - 126 Herbert Chitepo Street, Masvingo - 13 Shuvai Mahofa street",
   },
 ];
 
@@ -63,11 +68,11 @@ const FAQSection = () => {
               <Heading as="h1" size="xl">
                 FAQs
               </Heading>
-              <Text fontSize="md" color="gray.600">
+              {/* <Text fontSize="md" color="gray.600">
                 Everything you need to know about the product and billing. For
                 questions about licensing, please see our{" "}
                 <Link color="teal.500">licensing page</Link>.
-              </Text>
+              </Text> */}
             </VStack>
           </GridItem>
           <GridItem>
@@ -87,13 +92,13 @@ const FAQSection = () => {
           </GridItem>
         </Grid>
 
-        <Flex justify="center" mb={8}>
+        {/* <Flex justify="center" mb={8}>
           <Button colorScheme="teal" variant="outline">
             Show more FAQs
           </Button>
-        </Flex>
+        </Flex> */}
 
-        <Box
+        {/* <Box
           p={8}
           bg="green.50"
           borderRadius="md"
@@ -114,7 +119,7 @@ const FAQSection = () => {
           <Button colorScheme="green" size="lg" fontWeight="200">
             Send us an email
           </Button>
-        </Box>
+        </Box> */}
       </Container>
     </Box >
 
