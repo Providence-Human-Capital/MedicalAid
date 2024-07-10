@@ -56,23 +56,17 @@ const faqs = [
 const FAQSection = () => {
   return (
 
-    <Box p={10} bg="gray.50" pt={20} minH="70vh">
-      <Container maxW={{ base: "100%", md: "70%" }}>
-        {/* '2xl': "70%", xl: "70%", lg: "70%", md: "70%", sm: "100%", xs: "100%" */}
-        <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap={8} mb={8}>
+    <Box p={10} pt={12} w={'100%'} mb={6}>
+      <Container maxW={{ base: "100%", md: "90%" }}>
+        <Grid templateColumns={{ base: "1fr", md: "1fr 2fr" }} gap={1}>
           <GridItem>
-            <VStack spacing={4} textAlign={{ base: "center", md: "left" }}>
-              <Text fontSize="lg" fontWeight="bold" color="teal.500">
+            <VStack spacing={4} textAlign={{ base: "center", md: "left" }} mt={{ base: '0', md: '10' }}>
+              <Text fontSize="lg" fontWeight="bold" color="teal.600">
                 Support
               </Text>
               <Heading as="h1" size="xl">
                 FAQs
               </Heading>
-              {/* <Text fontSize="md" color="gray.600">
-                Everything you need to know about the product and billing. For
-                questions about licensing, please see our{" "}
-                <Link color="teal.500">licensing page</Link>.
-              </Text> */}
             </VStack>
           </GridItem>
           <GridItem>
@@ -85,14 +79,14 @@ const FAQSection = () => {
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
-                  <AccordionPanel pb={4}>{faq.answer}</AccordionPanel>
+                  <AccordionPanel pb={2}>{faq.answer}</AccordionPanel>
                 </AccordionItem>
               ))}
             </Accordion>
           </GridItem>
         </Grid>
-
-        {/* <Flex justify="center" mb={8}>
+        {/* 
+        <Flex justify="center" mb={8}>
           <Button colorScheme="teal" variant="outline">
             Show more FAQs
           </Button>

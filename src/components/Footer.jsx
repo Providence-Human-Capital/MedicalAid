@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <>
-      <Box as="footer" bg="green.500" color="white" py={10} px={5}>
+      <Box as="footer" bg="green.800" color="white" py={10} px={5}>
         <Grid
           templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
           // templateColumns={{ base: "2fr", md: "repeat(4, 1fr)" }}
@@ -94,7 +94,7 @@ const Footer = () => {
         </Grid>
       </Box>
 
-      <Box bg="#124538" color="whiteAlpha.800" height="6rem">
+      <Box color="whiteAlpha.800" bg="gray.900" >
         <Flex
           direction={isMobile ? "column" : "row"}
           justify="space-between"
@@ -102,8 +102,8 @@ const Footer = () => {
           maxW="1200px"
           mx="auto"
           p={{ base: 5, md: 6 }}
-          bg="#124538"
-        // pt={5}
+          // bg="gray.800"
+          pt={5}
         >
           <Text>©2024 Providence Human Capital</Text>
           <Link href="#" fontSize={12} mx={2}>

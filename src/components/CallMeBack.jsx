@@ -28,7 +28,7 @@ const CallMeBack = () => {
         p={4}
         pt={14}
       >
-        <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
+        <Container maxW={{ sm: "100%", md: "90%", lg: "80%", xl: "90%", "2xl": "68%" }}>
           <Flex
             direction={{ base: "column", md: "row" }}
             align="center"

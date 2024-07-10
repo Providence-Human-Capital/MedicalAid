@@ -64,24 +64,17 @@ const NavigationBar = () => {
           height={scrolled ? "0" : "9rem"}
           transition="height 0.3s ease-in-out"
           overflow="hidden"
+          justifyContent="center"
         >
-          <Flex align="center" px={4} width="100%">
-            <Spacer />
-            <Box fontSize="2xl" fontWeight="300" color="white">
-              <Link to="/">
-                <Image
-                  src="/images/medicalaid2.png"
-                  alt="Providence Medical Aid"
-                  height="6rem"
-                  pl={20}
-                />
-              </Link>
-            </Box>
-            <Spacer />
-            <Spacer />
-            <Spacer />
-            <Spacer />
-          </Flex>
+          <Box p={3}>
+            <Link to="/">
+              <Image
+                src="/images/medicalaid2.png"
+                alt="Providence Medical Aid"
+                height="7rem"
+              />
+            </Link>
+          </Box>
         </Flex>
         <Flex
           className="navbar-bottom"
@@ -94,59 +87,8 @@ const NavigationBar = () => {
         >
           <Spacer />
           <HStack spacing={6} display={displayMode} marginRight={4}>
-            <Menu position="relative">
-              <MenuButton
-                as={Link}
-                style={{ color: "#fff" }}
-                color="white"
-                fontWeight="200"
-                onMouseEnter={handleHover}
-                onMouseLeave={handleLeave}
-              >
-                Medical Insurance
-                <TriangleDownIcon ml={1} />
-              </MenuButton>
-              {menu && (
-                <Box
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                  zIndex="1"
-                  position="absolute"
-                  top={{ base: "100%", lg: "100%", xl: "93%", "2xl": "92%" }}
-                  left={{ base: "0%", lg: "0%", xl: "11%", "2xl": "23%" }}
-                  width={{ base: "18%", lg: "18%", xl: "15%", "2xl": "10%" }}
-                  bg="white"
-                  boxShadow="xl"
-                  borderRadius={'6px'}
-                  border={'1px solid #dbdbdb'}
-                >
-                  <MenuItem _hover={{ backgroundColor: '#d9d4d4' }}>Doctors</MenuItem>
-                  <MenuItem _hover={{ backgroundColor: '#d9d4d4' }}>Optometry</MenuItem>
-                  <MenuItem _hover={{ backgroundColor: '#d9d4d4' }}>Dentist</MenuItem>
-                </Box>
-              )}
-            </Menu>
-            {/* <span style={{ color: "#fff" }}>|</span> */}
-            {/* <Link style={{ color: "#fff" }} href="#" fontWeight="200"> */}
-            {/* Gap Cover */}
-            {/* <TriangleDownIcon ml={1} /> */}
-            {/* </Link> */}
-            <span style={{ color: "#fff" }}>|</span>
-            {location.pathname === "/contact-us" ? (
-              <Link
-                style={{ color: "#1F7" }}
-                to="/contact-us"
-                fontWeight="200"
-                className="link"
-              >
-                Contact
-              </Link>
-            ) : (
-              <Link to="/contact-us" fontWeight="200" className="link">
-                Contact
-              </Link>
-            )}
-            <span style={{ color: "#fff" }}>|</span>
+
+
             {location.pathname === "/self-service" ? (
               <Link
                 style={{ color: "#1F7" }}
@@ -197,6 +139,22 @@ const NavigationBar = () => {
                   Info Hub
                 </Link>
               </>
+            )}
+            <span style={{ color: "#fff" }}>|</span>
+
+            {location.pathname === "/contact-us" ? (
+              <Link
+                style={{ color: "#1F7" }}
+                to="/contact-us"
+                fontWeight="200"
+                className="link"
+              >
+                Contact
+              </Link>
+            ) : (
+              <Link to="/contact-us" fontWeight="200" className="link">
+                Contact
+              </Link>
             )}
 
           </HStack>

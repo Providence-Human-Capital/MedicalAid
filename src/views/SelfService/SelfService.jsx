@@ -8,6 +8,13 @@ import {
   HStack,
   Image,
   Container,
+  SimpleGrid,
+  Card,
+  ButtonGroup,
+  CardBody,
+  CardFooter,
+  Button,
+  Center,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import provider from "../../../public/icons/observation.png"
@@ -15,134 +22,87 @@ import doctor from "../../../public/icons/medical-staff.png"
 import counselling from "../../../public/icons/conversation.png"
 import pharmacy from "../../../public/icons/medicine.png"
 
+const serviceData = [
+  {
+    img: provider,
+    title: 'Find a provider',
+    link: "/clinic-location",
+    desc: 'Search for Doctors, Dentist, Hospitals, Optometrists and clinic',
+    more: 'Search on the Prime Cure Network for a Doctor, Dentist, Optometrist, Clinic',
+  },
+  {
+    img: doctor,
+    title: 'Consultation (Ask a Doctor)',
+    link: "/doctor-lnfo",
+    desc: 'Book “Ask a Doctor”: Virtual Doctors for diagnosis, scripts or referrals',
+    more: 'Search on the Prime Cure Network for a Doctor, Dentist, Optometrist, Clinic',
+  },
+  {
+    img: counselling,
+    title: 'Counselling',
+    link: "/clinic-location",
+    desc: 'Search for Pharmacies',
+    more: 'Telephonic, Virtual or Face-to-Face Counselling.',
+  },
+  {
+    img: pharmacy,
+    title: 'Find a Pharmacy',
+    link: "/clinic-location",
+    desc: 'Search for Pharmacies',
+    more: 'Search on the Prime Cure Network for a Pharmacy',
+  }
+]
+
 const SelfService = () => {
   return (
-    <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
-      <Box bg="gray.50" p={4}>
-      <Box textAlign="center" mb={8}>
-        <Heading color="green.600">Self-Support</Heading>
-      </Box>
-      <Flex justify="center" mb={8}>
-        <HStack spacing={0}>
-          <Box
-            // bg="green.500"
-            color="black"
-            py={2}
-            px={4}
-          >
-            <Text fontSize={'xl'} color="green.600" as={'b'}>Medical Insurance & Accident Cover</Text>
-          </Box>
-        </HStack>
-      </Flex>
-      <Flex justify="center" wrap="wrap" spacing={8}>
-        <VStack
-          bg="white"
-          p={8}
-          borderRadius="md"
-          boxShadow="md"
-          m={4}
-          maxW="sm"
-        >
-          <Image
-            src={provider}
-            height={{ base: '80px', lg: '120px' }}
-            alt="Find a provider"
-            mb={4}
-          />
-          <Heading size="md" color="green.600">
-            <Link
-              to={"/clinic-location"}
-              fontWeight="200"
-              className="link"
-              style={{ color: "green" }}
+    <Container maxW={{ sm: "100%", md: "80%", lg: "90%" }} mt={2}>
+      <Box p={4} mb={8}>
+        <Box textAlign="center" mb={8}>
+          <Heading color="green.600">Self-Support</Heading>
+        </Box>
+        <Flex justify="center" mb={8}>
+          <HStack spacing={0}>
+            <Box
+              // bg="green.500"
+              color="black"
+              py={2}
+              px={4}
             >
-              Find a provider
-            </Link>
-          </Heading>
-          <Text textAlign="center">
-            Search for Doctors, Dentist, Hospitals, Optometrists and clinic
-          </Text>
-          <Text textAlign="center" color="gray.600">
-            Search on the Prime Cure Network for a Doctor, Dentist,
-            Optometrist,Clinic
-          </Text>
-        </VStack>
-        <VStack
-          bg="white"
-          p={8}
-          borderRadius="md"
-          boxShadow="md"
-          m={4}
-          maxW="sm"
-        >
-          <Image src={doctor}
-            height={{ base: '80px', lg: '120px' }}
-            alt="Consultation" mb={4} />
+              <Text fontSize={'xl'} color="green.600" as={'b'}>Medical Insurance & Accident Cover</Text>
+            </Box>
+          </HStack>
+        </Flex>
+        <Flex justify="center" wrap="wrap" spacing={8}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3, xl: 4 }} spacing={6}>
+            {serviceData.map((service) => (
 
-          <Heading size="md" color="green.600">
-            <Link
-              to={"/doctor-lnfo"}
-              fontWeight="200"
-              className="link"
-              style={{ color: "green" }}
-            >
-              Consultation(Ask a Doctor)
-            </Link>
-          </Heading>
-          <Text textAlign="center">
-            Book “Ask a Doctor”: Virtual Doctors for diagnosis, scripts or
-            referrals
-          </Text>
-          <Text textAlign="center" color="gray.600">
-            {/* See the links to the Dis-Chem Health app stores */}
-          </Text>
-        </VStack>
-        <VStack
-          bg="white"
-          p={8}
-          borderRadius="md"
-          boxShadow="md"
-          m={4}
-          maxW="sm"
-        >
-          <Image
-            src={counselling}
-            height={{ base: '80px', lg: '120px' }}
-            alt="Book Family, Legal or Financial Counselling"
-            mb={4}
-          />
-          <Heading size="md" color="green.600">
-            Counselling
-          </Heading>
-          <Text textAlign="center">Search for Pharmacies</Text>
-          <Text textAlign="center" color="gray.600">
-            Telephonic, Virtual or Face-to-Face Counselling.
-          </Text>
-        </VStack>
-        <VStack
-          bg="white"
-          p={8}
-          borderRadius="md"
-          boxShadow="md"
-          m={4}
-          maxW="sm"
-        >
-          <Image
-            src={pharmacy}
-            height={{ base: '80px', lg: '120px' }}
-            alt="Find a Pharmacy"
-            mb={4}
-          />
-          <Heading size="md" color="green.600">
-            Find a Pharmacy
-          </Heading>
-          <Text textAlign="center">Search for Pharmacies</Text>
-          <Text textAlign="center" color="gray.600">
-            Search on the Prime Cure Network for a Pharmacy.
-          </Text>
-        </VStack>
-      </Flex>
-    </Box>
+              <Card maxW='lg' boxShadow={'xl'} border={'1px solid #eaedec'}>
+                <CardBody>
+                  <Center>
+                    <Image
+                      src={service.img}
+                      alt={service.title}
+                      borderRadius='lg'
+                      height={'8rem'}
+                    />
+                  </Center>
+                  <VStack mt='6' spacing='3' p={3} textAlign={'center'}>
+                    <Link to={service.link}>
+                      <Heading size='md' className='link' color={'green.700'} >{service.title}</Heading>
+                    </Link>
+                    <Text>
+                      {service.desc}
+                    </Text>
+                    <Text color='gray.500' fontSize='md'>
+                      {service.more}
+                    </Text>
+                  </VStack>
+                </CardBody>
+              </Card>
+            ))}
+          </SimpleGrid>
+        </Flex>
+      </Box>
     </Container>
   );
 };
