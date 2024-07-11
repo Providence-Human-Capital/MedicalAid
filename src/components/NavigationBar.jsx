@@ -90,14 +90,14 @@ const NavigationBar = () => {
 
 
             {location.pathname === "/self-service" ? (
-              <Link
-                style={{ color: "#1F7" }}
+              <Box
+                style={{ color: "#1F7", textDecoration: '2px underline' }}
                 to={"/self-service"}
                 fontWeight="200"
-                className="link"
+                textUnderlineOffset={'5px'}
               >
                 Self Support
-              </Link>
+              </Box>
             ) : (
               <Link to={"/self-service"} fontWeight="200" className="link">
                 Self Support
@@ -107,12 +107,13 @@ const NavigationBar = () => {
             <span style={{ color: "#fff" }}>|</span>
             {location.pathname === "/living-style" ? (
               <>
-                <Link to={"/living-style"}
-                  style={{ color: "#1F7" }}
+                <Box
+                  style={{ color: "#1F7", textDecoration: '2px underline' }}
                   fontWeight="200"
-                  className="link">
+                  textUnderlineOffset={'5px'}
+                >
                   Lifestyle Benefits
-                </Link>
+                </Box>
               </>
             ) : (
               <>
@@ -125,12 +126,13 @@ const NavigationBar = () => {
             <span style={{ color: "#fff" }}>|</span>
             {location.pathname === "/info-hub" ? (
               <>
-                <Link to={"/info-hub"}
-                  style={{ color: "#1F7" }}
+                <Box
+                  style={{ color: "#1F7", textDecoration: '2px underline' }}
                   fontWeight="200"
-                  className="link">
+                  textUnderlineOffset={'5px'}
+                >
                   Info Hub
-                </Link>
+                </Box>
               </>
             ) : (
 
@@ -143,14 +145,14 @@ const NavigationBar = () => {
             <span style={{ color: "#fff" }}>|</span>
 
             {location.pathname === "/contact-us" ? (
-              <Link
-                style={{ color: "#1F7" }}
+              <Box
+                style={{ color: "#1F7", textDecoration: '2px underline' }}
+                textUnderlineOffset={'5px'}
                 to="/contact-us"
                 fontWeight="200"
-                className="link"
               >
                 Contact
-              </Link>
+              </Box>
             ) : (
               <Link to="/contact-us" fontWeight="200" className="link">
                 Contact

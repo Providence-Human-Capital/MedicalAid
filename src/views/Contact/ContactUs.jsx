@@ -14,12 +14,12 @@ import {
 const ContactUs = () => {
   return (
     <Container maxW={{ sm: "100%", md: "90%", lg: "70%" }}>
-      <Box p={4}>
+      <Box p={4} mt={2}>
         <Text
           fontSize="2xl"
           fontWeight="bold"
           textAlign="center"
-          color="green.500"
+          color="green.600"
         >
           How can we help?
         </Text>
@@ -29,8 +29,8 @@ const ContactUs = () => {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <Box bg="gray.100" p={8} borderRadius="md">
-                <Text fontSize="xl" fontWeight="bold" color="green.500">
+              <Box bg="gray.200" p={8} borderRadius="md">
+                <Text fontSize="xl" fontWeight="bold" color="green.700">
                   Medical Insurance
                 </Text>
                 {/* <Text mt={2}>

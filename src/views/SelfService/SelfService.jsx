@@ -73,7 +73,7 @@ const SelfService = () => {
           </HStack>
         </Flex>
         <Flex justify="center" wrap="wrap" spacing={8}>
-          <SimpleGrid columns={{ base: 1, md: 2, lg: 3, xl: 4 }} spacing={6}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 4 }} spacing={6}>
             {serviceData.map((service) => (
 
               <Card maxW='lg' boxShadow={'xl'} border={'1px solid #eaedec'}>

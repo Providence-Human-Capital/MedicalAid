@@ -56,12 +56,12 @@ const Clinics = () => {
           Address: "81 Baines Avenue",
           Phone: "+263 242 255 288",
         },
-        {
-          id: 3,
-          name: "52 Baines Providence Medical Center",
-          Address: "52 Baines Avenue",
-          Phone: "+263 242 794 270",
-        },
+        // {
+        //   id: 3,
+        //   name: "52 Baines Providence Medical Center",
+        //   Address: "52 Baines Avenue",
+        //   Phone: "+263 242 794 270",
+        // },
         {
           id: 4,
           name: "64 Cork Executive Clinc",
@@ -323,7 +323,7 @@ const Clinics = () => {
           {phcMedicalFacilities &&
             phcMedicalFacilities.map((facility) => (
               <>
-                <Text mt="9" mb="2" fontSize={{ base: "lg", md: "xl" }}>
+                <Text mt="9" mb="3" fontSize={{ base: "lg", md: "xl" }}>
                   Location: {facility.location}
                 </Text>
                 <Table
